@@ -12,6 +12,8 @@ from cryptofeed import FeedHandler
 from cryptofeed.defines import BID, ASK, L2_BOOK
 from cryptofeed.exchanges import Kraken
 from datetime import datetime
+import threading
+import asyncio
 
 
 def filter_orderbook(orderbooks, book, symbol, depth = 10):
@@ -33,22 +35,27 @@ async def bookfunc(params, orderbooks, feed, symbol, book, timestamp, receipt_ti
 
 
 def main():
+    loop = asyncio.new_event_loop()
+    asyncio.set_event_loop(loop)
 
     # Parameters
     params = {'orderbook': {'depth': 2}, 'price_model':{}, 'trade_model': {}}
-    config = {'log': {'filename': 'demo.log', 'level': 'INFO'}}
+    config = {'uvloop': False, 'log': {'filename': 'demo.log', 'level': 'INFO'}}
 
     orderbooks = {}
 
     f = FeedHandler(config=config)
-    f.add_feed(Kraken(checksum_validation=True, subscription={L2_BOOK: ['BTC-USD', 'ETH-USD', 'LINK-USD', 'LTC-USD', 'ADA-USD']},
+    l2_book = ['BTC-USD', 'ETH-USD', 'LINK-USD', 'LTC-USD', 'ADA-USD']
+    f.add_feed(Kraken(checksum_validation=True, subscription={L2_BOOK: l2_book},
                       callbacks={L2_BOOK: fct.partial(bookfunc, params, orderbooks)})) # This way passes the orderbooks inside the callback
 
     # OnClick Run
-    f.run()
+    f.run(install_signal_handlers=False)
 
     # OnClick Stop
     #f.stop()
 
 if __name__ == '__main__':
-    main()
+    thread = threading.Thread(target=main)
+    thread.start()
+    thread.join()

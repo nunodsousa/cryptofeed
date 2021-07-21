@@ -1,0 +1,329 @@
+2021-07-18 18:05:08,018 : INFO : Config: use dict containing the following main keys: log
+2021-07-18 18:05:08,019 : INFO : KRAKEN: create Config from type: <class 'NoneType'>
+2021-07-18 18:05:08,019 : INFO : KRAKEN: Getting list of symbols
+2021-07-18 18:05:08,450 : INFO : KRAKEN: 363 symbols
+2021-07-18 18:05:08,453 : INFO : FH: uvloop activated
+2021-07-18 20:00:59,051 : WARNING : KRAKEN-321e3f: encountered connection issue code = 1006 (connection closed abnormally [internal]), no reason - reconnecting...
+Traceback (most recent call last):
+  File "/Users/nunodesousa/opt/anaconda3/envs/simia/lib/python3.8/site-packages/websockets/protocol.py", line 827, in transfer_data
+    message = await self.read_message()
+  File "/Users/nunodesousa/opt/anaconda3/envs/simia/lib/python3.8/site-packages/websockets/protocol.py", line 895, in read_message
+    frame = await self.read_data_frame(max_size=self.max_size)
+  File "/Users/nunodesousa/opt/anaconda3/envs/simia/lib/python3.8/site-packages/websockets/protocol.py", line 971, in read_data_frame
+    frame = await self.read_frame(max_size)
+  File "/Users/nunodesousa/opt/anaconda3/envs/simia/lib/python3.8/site-packages/websockets/protocol.py", line 1047, in read_frame
+    frame = await Frame.read(
+  File "/Users/nunodesousa/opt/anaconda3/envs/simia/lib/python3.8/site-packages/websockets/framing.py", line 133, in read
+    data = await reader(length)
+  File "/Users/nunodesousa/opt/anaconda3/envs/simia/lib/python3.8/asyncio/streams.py", line 723, in readexactly
+    await self._wait_for_data('readexactly')
+  File "/Users/nunodesousa/opt/anaconda3/envs/simia/lib/python3.8/asyncio/streams.py", line 517, in _wait_for_data
+    await self._waiter
+BrokenPipeError: [Errno 32] Broken pipe
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/nunodesousa/opt/anaconda3/envs/simia/lib/python3.8/site-packages/cryptofeed/feedhandler.py", line 322, in _connect
+    await self._handler(connection, handler)
+  File "/Users/nunodesousa/opt/anaconda3/envs/simia/lib/python3.8/site-packages/cryptofeed/feedhandler.py", line 361, in _handler
+    async for message in connection.read():
+  File "/Users/nunodesousa/opt/anaconda3/envs/simia/lib/python3.8/site-packages/cryptofeed/connection.py", line 74, in read
+    async for data in self.conn:
+  File "/Users/nunodesousa/opt/anaconda3/envs/simia/lib/python3.8/site-packages/websockets/protocol.py", line 439, in __aiter__
+    yield await self.recv()
+  File "/Users/nunodesousa/opt/anaconda3/envs/simia/lib/python3.8/site-packages/websockets/protocol.py", line 509, in recv
+    await self.ensure_open()
+  File "/Users/nunodesousa/opt/anaconda3/envs/simia/lib/python3.8/site-packages/websockets/protocol.py", line 803, in ensure_open
+    raise self.connection_closed_exc()
+websockets.exceptions.ConnectionClosedError: code = 1006 (connection closed abnormally [internal]), no reason
+2021-07-18 21:15:50,085 : WARNING : KRAKEN-321e3f: encountered connection issue code = 1006 (connection closed abnormally [internal]), no reason - reconnecting...
+Traceback (most recent call last):
+  File "/Users/nunodesousa/opt/anaconda3/envs/simia/lib/python3.8/site-packages/websockets/protocol.py", line 827, in transfer_data
+    message = await self.read_message()
+  File "/Users/nunodesousa/opt/anaconda3/envs/simia/lib/python3.8/site-packages/websockets/protocol.py", line 895, in read_message
+    frame = await self.read_data_frame(max_size=self.max_size)
+  File "/Users/nunodesousa/opt/anaconda3/envs/simia/lib/python3.8/site-packages/websockets/protocol.py", line 971, in read_data_frame
+    frame = await self.read_frame(max_size)
+  File "/Users/nunodesousa/opt/anaconda3/envs/simia/lib/python3.8/site-packages/websockets/protocol.py", line 1047, in read_frame
+    frame = await Frame.read(
+  File "/Users/nunodesousa/opt/anaconda3/envs/simia/lib/python3.8/site-packages/websockets/framing.py", line 133, in read
+    data = await reader(length)
+  File "/Users/nunodesousa/opt/anaconda3/envs/simia/lib/python3.8/asyncio/streams.py", line 723, in readexactly
+    await self._wait_for_data('readexactly')
+  File "/Users/nunodesousa/opt/anaconda3/envs/simia/lib/python3.8/asyncio/streams.py", line 517, in _wait_for_data
+    await self._waiter
+BrokenPipeError: [Errno 32] Broken pipe
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/nunodesousa/opt/anaconda3/envs/simia/lib/python3.8/site-packages/cryptofeed/feedhandler.py", line 322, in _connect
+    await self._handler(connection, handler)
+  File "/Users/nunodesousa/opt/anaconda3/envs/simia/lib/python3.8/site-packages/cryptofeed/feedhandler.py", line 361, in _handler
+    async for message in connection.read():
+  File "/Users/nunodesousa/opt/anaconda3/envs/simia/lib/python3.8/site-packages/cryptofeed/connection.py", line 74, in read
+    async for data in self.conn:
+  File "/Users/nunodesousa/opt/anaconda3/envs/simia/lib/python3.8/site-packages/websockets/protocol.py", line 439, in __aiter__
+    yield await self.recv()
+  File "/Users/nunodesousa/opt/anaconda3/envs/simia/lib/python3.8/site-packages/websockets/protocol.py", line 509, in recv
+    await self.ensure_open()
+  File "/Users/nunodesousa/opt/anaconda3/envs/simia/lib/python3.8/site-packages/websockets/protocol.py", line 803, in ensure_open
+    raise self.connection_closed_exc()
+websockets.exceptions.ConnectionClosedError: code = 1006 (connection closed abnormally [internal]), no reason
+2021-07-18 21:15:56,032 : INFO : FH: System Exit received - shutting down
+2021-07-18 21:15:56,032 : INFO : FH: flag retries=0 to stop the tasks running the connection handlers
+2021-07-18 21:15:56,032 : INFO : FH: create the tasks to properly shutdown the backends (to flush the local cache)
+2021-07-18 21:15:56,032 : INFO : FH: wait 1 backend tasks until termination
+2021-07-18 21:15:56,032 : INFO : KRAKEN: feed shutdown starting...
+2021-07-18 21:15:56,033 : INFO : KRAKEN: feed shutdown completed
+2021-07-18 21:15:56,033 : INFO : FH: stop the AsyncIO loop
+2021-07-18 21:15:56,033 : INFO : FH: run the AsyncIO event loop one last time
+2021-07-18 21:15:56,033 : INFO : FH: cancel the 5 pending tasks
+2021-07-18 21:15:56,033 : INFO : FH: run the pending tasks until complete
+2021-07-18 21:15:56,222 : INFO : FH: shutdown asynchronous generators
+2021-07-18 21:15:56,222 : INFO : FH: close the AsyncIO loop
+2021-07-18 21:15:56,222 : INFO : FH: leaving run()
+2021-07-18 21:18:00,540 : INFO : Config: use dict containing the following main keys: log
+2021-07-18 21:18:00,540 : INFO : KRAKEN: create Config from type: <class 'NoneType'>
+2021-07-18 21:18:00,540 : INFO : KRAKEN: Getting list of symbols
+2021-07-18 21:18:01,093 : INFO : KRAKEN: 363 symbols
+2021-07-18 21:18:01,102 : INFO : FH: uvloop activated
+2021-07-18 21:18:10,151 : INFO : FH: System Exit received - shutting down
+2021-07-18 21:18:10,152 : INFO : FH: flag retries=0 to stop the tasks running the connection handlers
+2021-07-18 21:18:10,152 : INFO : FH: create the tasks to properly shutdown the backends (to flush the local cache)
+2021-07-18 21:18:10,152 : INFO : FH: wait 1 backend tasks until termination
+2021-07-18 21:18:10,152 : INFO : KRAKEN: feed shutdown starting...
+2021-07-18 21:18:10,152 : INFO : KRAKEN: feed shutdown completed
+2021-07-18 21:18:10,152 : INFO : FH: stop the AsyncIO loop
+2021-07-18 21:18:10,152 : INFO : FH: run the AsyncIO event loop one last time
+2021-07-18 21:18:10,153 : INFO : FH: cancel the 6 pending tasks
+2021-07-18 21:18:10,153 : INFO : FH: run the pending tasks until complete
+2021-07-18 21:18:10,342 : INFO : KRAKEN-e256dd: terminate the connection handler because self.retries=0
+2021-07-18 21:18:10,342 : INFO : FH: shutdown asynchronous generators
+2021-07-18 21:18:10,343 : INFO : FH: close the AsyncIO loop
+2021-07-18 21:18:10,343 : INFO : FH: leaving run()
+2021-07-18 21:18:15,569 : INFO : Config: use dict containing the following main keys: log
+2021-07-18 21:18:15,569 : INFO : KRAKEN: create Config from type: <class 'NoneType'>
+2021-07-18 21:18:15,569 : INFO : KRAKEN: Getting list of symbols
+2021-07-18 21:18:15,662 : INFO : KRAKEN: 363 symbols
+2021-07-18 21:18:15,666 : INFO : FH: uvloop activated
+2021-07-18 21:18:19,690 : INFO : FH: System Exit received - shutting down
+2021-07-18 21:18:19,690 : INFO : FH: flag retries=0 to stop the tasks running the connection handlers
+2021-07-18 21:18:19,690 : INFO : FH: create the tasks to properly shutdown the backends (to flush the local cache)
+2021-07-18 21:18:19,690 : INFO : FH: wait 1 backend tasks until termination
+2021-07-18 21:18:19,690 : INFO : KRAKEN: feed shutdown starting...
+2021-07-18 21:18:19,690 : INFO : KRAKEN: feed shutdown completed
+2021-07-18 21:18:19,690 : INFO : FH: stop the AsyncIO loop
+2021-07-18 21:18:19,690 : INFO : FH: run the AsyncIO event loop one last time
+2021-07-18 21:18:19,690 : INFO : FH: cancel the 5 pending tasks
+2021-07-18 21:18:19,691 : INFO : FH: run the pending tasks until complete
+2021-07-18 21:18:29,070 : INFO : Config: use dict containing the following main keys: log
+2021-07-18 21:18:29,070 : INFO : KRAKEN: create Config from type: <class 'NoneType'>
+2021-07-18 21:18:29,071 : INFO : KRAKEN: Getting list of symbols
+2021-07-18 21:18:29,161 : INFO : KRAKEN: 363 symbols
+2021-07-18 21:18:46,292 : INFO : Config: use dict containing the following main keys: log
+2021-07-18 21:18:46,292 : INFO : KRAKEN: create Config from type: <class 'NoneType'>
+2021-07-18 21:18:46,292 : INFO : KRAKEN: Getting list of symbols
+2021-07-18 21:18:46,392 : INFO : KRAKEN: 363 symbols
+2021-07-18 21:18:46,396 : INFO : FH: uvloop activated
+2021-07-18 21:18:51,964 : INFO : FH: System Exit received - shutting down
+2021-07-18 21:18:51,964 : INFO : FH: flag retries=0 to stop the tasks running the connection handlers
+2021-07-18 21:18:51,964 : INFO : FH: create the tasks to properly shutdown the backends (to flush the local cache)
+2021-07-18 21:18:51,965 : INFO : FH: wait 1 backend tasks until termination
+2021-07-18 21:18:51,965 : INFO : KRAKEN: feed shutdown starting...
+2021-07-18 21:18:51,965 : INFO : KRAKEN: feed shutdown completed
+2021-07-18 21:18:51,965 : INFO : FH: stop the AsyncIO loop
+2021-07-18 21:18:51,965 : INFO : FH: run the AsyncIO event loop one last time
+2021-07-18 21:18:51,965 : INFO : FH: cancel the 5 pending tasks
+2021-07-18 21:18:51,965 : INFO : FH: run the pending tasks until complete
+2021-07-18 21:18:52,156 : INFO : FH: shutdown asynchronous generators
+2021-07-18 21:18:52,157 : INFO : FH: close the AsyncIO loop
+2021-07-18 21:18:52,157 : INFO : FH: leaving run()
+2021-07-18 21:20:02,376 : INFO : Config: use dict containing the following main keys: log
+2021-07-18 21:20:02,376 : INFO : KRAKEN: create Config from type: <class 'NoneType'>
+2021-07-18 21:20:02,376 : INFO : KRAKEN: Getting list of symbols
+2021-07-18 21:20:02,475 : INFO : KRAKEN: 363 symbols
+2021-07-18 21:20:02,478 : INFO : FH: uvloop activated
+2021-07-18 21:21:04,447 : INFO : Config: use dict containing the following main keys: log
+2021-07-18 21:21:04,448 : INFO : KRAKEN: create Config from type: <class 'NoneType'>
+2021-07-18 21:21:04,448 : INFO : KRAKEN: Getting list of symbols
+2021-07-18 21:21:05,722 : INFO : KRAKEN: 363 symbols
+2021-07-18 21:21:05,726 : INFO : FH: uvloop activated
+2021-07-18 21:31:50,972 : INFO : Config: use dict containing the following main keys: log
+2021-07-18 21:31:50,972 : INFO : KRAKEN: create Config from type: <class 'NoneType'>
+2021-07-18 21:31:50,973 : INFO : KRAKEN: Getting list of symbols
+2021-07-18 21:31:51,153 : INFO : KRAKEN: 363 symbols
+2021-07-18 21:31:51,157 : INFO : FH: uvloop activated
+2021-07-18 23:58:53,390 : INFO : Config: use dict containing the following main keys: log
+2021-07-18 23:58:53,391 : INFO : KRAKEN: create Config from type: <class 'NoneType'>
+2021-07-18 23:58:53,391 : INFO : KRAKEN: Getting list of symbols
+2021-07-18 23:58:53,587 : INFO : KRAKEN: 363 symbols
+2021-07-18 23:58:53,593 : INFO : FH: uvloop activated
+2021-07-18 23:59:50,290 : INFO : Config: use dict containing the following main keys: log
+2021-07-18 23:59:50,291 : INFO : KRAKEN: create Config from type: <class 'NoneType'>
+2021-07-18 23:59:50,291 : INFO : KRAKEN: Getting list of symbols
+2021-07-18 23:59:51,610 : INFO : KRAKEN: 363 symbols
+2021-07-18 23:59:51,614 : INFO : FH: uvloop activated
+2021-07-19 00:00:28,004 : INFO : Config: use dict containing the following main keys: log
+2021-07-19 00:00:28,004 : INFO : KRAKEN: create Config from type: <class 'NoneType'>
+2021-07-19 00:00:28,004 : INFO : KRAKEN: Getting list of symbols
+2021-07-19 00:00:28,097 : INFO : KRAKEN: 363 symbols
+2021-07-19 00:00:28,100 : INFO : FH: uvloop activated
+2021-07-19 00:02:29,076 : INFO : Config: use dict containing the following main keys: log
+2021-07-19 00:02:29,076 : INFO : KRAKEN: create Config from type: <class 'NoneType'>
+2021-07-19 00:02:29,076 : INFO : KRAKEN: Getting list of symbols
+2021-07-19 00:02:29,511 : INFO : KRAKEN: 363 symbols
+2021-07-19 00:02:29,515 : INFO : FH: uvloop activated
+2021-07-19 00:03:14,203 : INFO : Config: use dict containing the following main keys: log
+2021-07-19 00:03:14,203 : INFO : KRAKEN: create Config from type: <class 'NoneType'>
+2021-07-19 00:03:14,203 : INFO : KRAKEN: Getting list of symbols
+2021-07-19 00:03:14,697 : INFO : KRAKEN: 363 symbols
+2021-07-19 00:03:14,701 : INFO : FH: uvloop activated
+2021-07-19 16:50:25,144 : INFO : Config: use dict containing the following main keys: log
+2021-07-19 16:50:25,144 : INFO : KRAKEN: create Config from type: <class 'NoneType'>
+2021-07-19 16:50:25,144 : INFO : KRAKEN: Getting list of symbols
+2021-07-19 16:50:25,359 : INFO : KRAKEN: 363 symbols
+2021-07-19 16:50:25,366 : INFO : FH: uvloop activated
+2021-07-19 16:55:11,876 : INFO : Config: use dict containing the following main keys: log
+2021-07-19 16:55:11,876 : INFO : KRAKEN: create Config from type: <class 'NoneType'>
+2021-07-19 16:55:11,876 : INFO : KRAKEN: Getting list of symbols
+2021-07-19 16:55:11,975 : INFO : KRAKEN: 363 symbols
+2021-07-19 16:55:11,979 : INFO : FH: uvloop activated
+2021-07-19 16:55:28,981 : INFO : Config: use dict containing the following main keys: log
+2021-07-19 16:55:28,981 : INFO : KRAKEN: create Config from type: <class 'NoneType'>
+2021-07-19 16:55:28,981 : INFO : KRAKEN: Getting list of symbols
+2021-07-19 16:55:29,095 : INFO : KRAKEN: 363 symbols
+2021-07-19 16:55:29,099 : INFO : FH: uvloop activated
+2021-07-19 16:56:47,997 : INFO : Config: use dict containing the following main keys: log
+2021-07-19 16:56:47,997 : INFO : KRAKEN: create Config from type: <class 'NoneType'>
+2021-07-19 16:56:47,998 : INFO : KRAKEN: Getting list of symbols
+2021-07-19 16:56:48,140 : INFO : KRAKEN: 363 symbols
+2021-07-19 16:56:48,144 : INFO : FH: uvloop activated
+2021-07-19 17:01:21,452 : INFO : Config: use dict containing the following main keys: log
+2021-07-19 17:01:21,453 : INFO : KRAKEN: create Config from type: <class 'NoneType'>
+2021-07-19 17:01:21,453 : INFO : KRAKEN: Getting list of symbols
+2021-07-19 17:01:22,743 : INFO : KRAKEN: 363 symbols
+2021-07-19 17:01:22,747 : INFO : FH: uvloop activated
+2021-07-19 17:11:16,120 : INFO : Config: use dict containing the following main keys: log
+2021-07-19 17:11:16,120 : INFO : KRAKEN: create Config from type: <class 'NoneType'>
+2021-07-19 17:11:16,121 : INFO : KRAKEN: Getting list of symbols
+2021-07-19 17:11:16,582 : INFO : KRAKEN: 363 symbols
+2021-07-19 17:11:16,586 : INFO : FH: uvloop activated
+2021-07-19 17:13:21,433 : INFO : Config: use dict containing the following main keys: log
+2021-07-19 17:13:21,434 : INFO : KRAKEN: create Config from type: <class 'NoneType'>
+2021-07-19 17:13:21,434 : INFO : KRAKEN: Getting list of symbols
+2021-07-19 17:13:21,528 : INFO : KRAKEN: 363 symbols
+2021-07-19 17:13:21,532 : INFO : FH: uvloop activated
+2021-07-19 17:16:16,228 : INFO : Config: use dict containing the following main keys: log
+2021-07-19 17:16:16,228 : INFO : KRAKEN: create Config from type: <class 'NoneType'>
+2021-07-19 17:16:16,228 : INFO : KRAKEN: Getting list of symbols
+2021-07-19 17:16:16,362 : INFO : KRAKEN: 363 symbols
+2021-07-19 17:16:16,366 : INFO : FH: uvloop activated
+2021-07-19 17:16:45,224 : INFO : Config: use dict containing the following main keys: log
+2021-07-19 17:16:45,224 : INFO : KRAKEN: create Config from type: <class 'NoneType'>
+2021-07-19 17:16:45,224 : INFO : KRAKEN: Getting list of symbols
+2021-07-19 17:16:45,313 : INFO : KRAKEN: 363 symbols
+2021-07-19 17:16:45,317 : INFO : FH: uvloop activated
+2021-07-19 17:18:53,031 : INFO : Config: use dict containing the following main keys: log
+2021-07-19 17:18:53,032 : INFO : KRAKEN: create Config from type: <class 'NoneType'>
+2021-07-19 17:18:53,032 : INFO : KRAKEN: Getting list of symbols
+2021-07-19 17:18:53,182 : INFO : KRAKEN: 363 symbols
+2021-07-19 17:18:53,186 : INFO : FH: uvloop activated
+2021-07-19 17:21:42,398 : INFO : Config: use dict containing the following main keys: log
+2021-07-19 17:21:42,398 : INFO : KRAKEN: create Config from type: <class 'NoneType'>
+2021-07-19 17:21:42,398 : INFO : KRAKEN: Getting list of symbols
+2021-07-19 17:21:42,546 : INFO : KRAKEN: 363 symbols
+2021-07-19 17:21:42,550 : INFO : FH: uvloop activated
+2021-07-19 17:24:09,200 : INFO : Config: use dict containing the following main keys: log
+2021-07-19 17:24:09,200 : INFO : KRAKEN: create Config from type: <class 'NoneType'>
+2021-07-19 17:24:09,200 : INFO : KRAKEN: Getting list of symbols
+2021-07-19 17:24:09,671 : INFO : KRAKEN: 363 symbols
+2021-07-19 17:24:09,675 : INFO : FH: uvloop activated
+2021-07-19 17:25:10,519 : INFO : Config: use dict containing the following main keys: log
+2021-07-19 17:25:10,519 : INFO : KRAKEN: create Config from type: <class 'NoneType'>
+2021-07-19 17:25:10,519 : INFO : KRAKEN: Getting list of symbols
+2021-07-19 17:25:10,657 : INFO : KRAKEN: 363 symbols
+2021-07-19 17:25:10,661 : INFO : FH: uvloop activated
+2021-07-19 17:28:39,069 : INFO : Config: use dict containing the following main keys: log
+2021-07-19 17:28:39,070 : INFO : KRAKEN: create Config from type: <class 'NoneType'>
+2021-07-19 17:28:39,070 : INFO : KRAKEN: Getting list of symbols
+2021-07-19 17:28:39,495 : INFO : KRAKEN: 363 symbols
+2021-07-19 17:28:39,499 : INFO : FH: uvloop activated
+2021-07-19 17:29:08,497 : INFO : Config: use dict containing the following main keys: log
+2021-07-19 17:29:08,498 : INFO : KRAKEN: create Config from type: <class 'NoneType'>
+2021-07-19 17:29:08,498 : INFO : KRAKEN: Getting list of symbols
+2021-07-19 17:29:08,885 : INFO : KRAKEN: 363 symbols
+2021-07-19 17:29:08,888 : INFO : FH: uvloop activated
+2021-07-19 17:31:07,576 : INFO : Config: use dict containing the following main keys: log
+2021-07-19 17:31:07,577 : INFO : KRAKEN: create Config from type: <class 'NoneType'>
+2021-07-19 17:31:07,577 : INFO : KRAKEN: Getting list of symbols
+2021-07-19 17:31:07,696 : INFO : KRAKEN: 363 symbols
+2021-07-19 17:31:07,701 : INFO : FH: uvloop activated
+2021-07-19 17:32:08,031 : INFO : Config: use dict containing the following main keys: log
+2021-07-19 17:32:08,031 : INFO : KRAKEN: create Config from type: <class 'NoneType'>
+2021-07-19 17:32:08,031 : INFO : KRAKEN: Getting list of symbols
+2021-07-19 17:32:08,143 : INFO : KRAKEN: 363 symbols
+2021-07-19 17:32:08,147 : INFO : FH: uvloop activated
+2021-07-19 17:34:34,238 : INFO : Config: use dict containing the following main keys: log
+2021-07-19 17:34:34,238 : INFO : KRAKEN: create Config from type: <class 'NoneType'>
+2021-07-19 17:34:34,238 : INFO : KRAKEN: Getting list of symbols
+2021-07-19 17:34:34,337 : INFO : KRAKEN: 363 symbols
+2021-07-19 17:34:34,341 : INFO : FH: uvloop activated
+2021-07-19 17:34:38,956 : INFO : Config: use dict containing the following main keys: log
+2021-07-19 17:34:38,957 : INFO : KRAKEN: create Config from type: <class 'NoneType'>
+2021-07-19 17:34:38,957 : INFO : KRAKEN: Getting list of symbols
+2021-07-19 17:34:39,047 : INFO : KRAKEN: 363 symbols
+2021-07-19 17:34:39,051 : INFO : FH: uvloop activated
+2021-07-19 17:36:45,164 : INFO : Config: use dict containing the following main keys: log
+2021-07-19 17:36:45,164 : INFO : KRAKEN: create Config from type: <class 'NoneType'>
+2021-07-19 17:36:45,164 : INFO : KRAKEN: Getting list of symbols
+2021-07-19 17:36:45,556 : INFO : KRAKEN: 363 symbols
+2021-07-19 17:36:45,560 : INFO : FH: uvloop activated
+2021-07-19 17:37:35,899 : INFO : Config: use dict containing the following main keys: log
+2021-07-19 17:37:35,899 : INFO : KRAKEN: create Config from type: <class 'NoneType'>
+2021-07-19 17:37:35,899 : INFO : KRAKEN: Getting list of symbols
+2021-07-19 17:37:36,382 : INFO : KRAKEN: 363 symbols
+2021-07-19 17:37:36,386 : INFO : FH: uvloop activated
+2021-07-19 17:40:12,077 : INFO : Config: use dict containing the following main keys: log
+2021-07-19 17:40:12,077 : INFO : KRAKEN: create Config from type: <class 'NoneType'>
+2021-07-19 17:40:12,077 : INFO : KRAKEN: Getting list of symbols
+2021-07-19 17:40:12,180 : INFO : KRAKEN: 363 symbols
+2021-07-19 17:40:12,183 : INFO : FH: uvloop activated
+2021-07-19 17:46:32,584 : INFO : Config: use dict containing the following main keys: log
+2021-07-19 17:46:32,584 : INFO : KRAKEN: create Config from type: <class 'NoneType'>
+2021-07-19 17:46:32,585 : INFO : KRAKEN: Getting list of symbols
+2021-07-19 17:46:32,785 : INFO : KRAKEN: 363 symbols
+2021-07-19 17:46:32,790 : INFO : FH: uvloop activated
+2021-07-19 17:50:56,597 : INFO : Config: use dict containing the following main keys: log
+2021-07-19 17:50:56,597 : INFO : KRAKEN: create Config from type: <class 'NoneType'>
+2021-07-19 17:50:56,597 : INFO : KRAKEN: Getting list of symbols
+2021-07-19 17:50:57,081 : INFO : KRAKEN: 363 symbols
+2021-07-19 17:50:57,085 : INFO : FH: uvloop activated
+2021-07-19 18:18:55,001 : INFO : Config: use dict containing the following main keys: log
+2021-07-19 18:18:55,001 : INFO : KRAKEN: create Config from type: <class 'NoneType'>
+2021-07-19 18:18:55,002 : INFO : KRAKEN: Getting list of symbols
+2021-07-19 18:18:55,208 : INFO : KRAKEN: 363 symbols
+2021-07-19 18:18:55,212 : INFO : FH: uvloop activated
+2021-07-19 18:19:01,851 : INFO : Config: use dict containing the following main keys: log
+2021-07-19 18:19:01,851 : INFO : KRAKEN: create Config from type: <class 'NoneType'>
+2021-07-19 18:19:01,851 : INFO : KRAKEN: Getting list of symbols
+2021-07-19 18:19:01,974 : INFO : KRAKEN: 363 symbols
+2021-07-19 18:19:01,978 : INFO : FH: uvloop activated
+2021-07-19 18:21:30,278 : INFO : Config: use dict containing the following main keys: log
+2021-07-19 18:21:30,278 : INFO : KRAKEN: create Config from type: <class 'NoneType'>
+2021-07-19 18:21:30,278 : INFO : KRAKEN: Getting list of symbols
+2021-07-19 18:21:30,370 : INFO : KRAKEN: 363 symbols
+2021-07-19 18:21:30,373 : INFO : FH: uvloop activated
+2021-07-19 18:23:13,303 : INFO : Config: use dict containing the following main keys: log
+2021-07-19 18:23:13,303 : INFO : KRAKEN: create Config from type: <class 'NoneType'>
+2021-07-19 18:23:13,303 : INFO : KRAKEN: Getting list of symbols
+2021-07-19 18:23:13,404 : INFO : KRAKEN: 363 symbols
+2021-07-19 18:23:13,408 : INFO : FH: uvloop activated
+2021-07-19 18:24:39,076 : INFO : Config: use dict containing the following main keys: log
+2021-07-19 18:24:39,077 : INFO : KRAKEN: create Config from type: <class 'NoneType'>
+2021-07-19 18:24:39,077 : INFO : KRAKEN: Getting list of symbols
+2021-07-19 18:24:39,168 : INFO : KRAKEN: 363 symbols
+2021-07-19 18:24:39,172 : INFO : FH: uvloop activated
+2021-07-19 19:48:20,785 : INFO : Config: use dict containing the following main keys: log
+2021-07-19 19:48:20,785 : INFO : KRAKEN: no Config provided, using default config

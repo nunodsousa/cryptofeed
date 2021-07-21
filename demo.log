@@ -1,0 +1,14 @@
+2021-07-19 20:02:54,679 : INFO : Config: use dict containing the following main keys: log
+2021-07-19 20:02:54,679 : INFO : KRAKEN: no Config provided, using default config
+2021-07-19 20:02:58,610 : INFO : FH: System Exit received - shutting down
+2021-07-19 20:02:58,610 : INFO : FH: shutdown connections handlers in feeds
+2021-07-19 20:02:58,610 : INFO : FH: create the tasks to properly shutdown the backends (to flush the local cache)
+2021-07-19 20:02:58,611 : INFO : FH: wait 1 backend tasks until termination
+2021-07-19 20:02:58,611 : INFO : KRAKEN: feed shutdown starting...
+2021-07-19 20:02:58,626 : INFO : KRAKEN.ws.1: terminate the connection handler because not running
+2021-07-21 14:04:06,566 : INFO : Config: use dict containing the following main keys: uvloop, log
+2021-07-21 14:04:06,572 : INFO : KRAKEN: no Config provided, using default config
+2021-07-21 14:04:42,321 : INFO : Config: use dict containing the following main keys: uvloop, log
+2021-07-21 14:04:42,321 : INFO : KRAKEN: no Config provided, using default config
+2021-07-21 14:11:46,592 : INFO : Config: use dict containing the following main keys: uvloop, log
+2021-07-21 14:11:46,592 : INFO : KRAKEN: no Config provided, using default config
